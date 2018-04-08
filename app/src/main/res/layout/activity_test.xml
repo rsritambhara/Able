@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.example.aniruddh.able.TestActivity">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <com.github.gcacace.signaturepad.views.SignaturePad
+        android:id="@+id/signaturePad"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp" />
+
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/signaturePad"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="78dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:text="Save"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape"
+
+            android:text="Clear"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/play_audio_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/signaturePad"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/signaturePad"
+        android:layout_marginTop="12dp"
+        android:onClick="onPlayClick"
+        app:srcCompat="@drawable/speaker" />
+
+    <ImageView
+        android:id="@+id/next_question_button"
+        android:onClick="onNextClick"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/signaturePad"
+        android:layout_alignRight="@+id/signaturePad"
+        android:layout_alignTop="@+id/play_audio_button"
+        app:srcCompat="@drawable/next" />
+
+</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

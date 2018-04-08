@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aniruddh.able.VideoActivity">
+
+    <RelativeLayout
+        android:layout_width="414dp"
+        android:layout_height="648dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <id.agusibrahim.yuuplayer.YuuPlayer
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="127dp"
+            android:layout_marginRight="127dp"
+            app:autoplay="true"
+            app:video_quality="small"
+            app:loop="true" />
+
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            android:id="@+id/signaturePad"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/videoView"
+            android:layout_marginTop="38dp" />
+
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="16dp"
+            android:layout_below="@id/signaturePad"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
